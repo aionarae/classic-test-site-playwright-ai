@@ -1,0 +1,24 @@
+{
+  "name": "playwright-ai-tests",
+  "version": "1.0.0",
+  "description": "Playwright test automation with AI-powered prompts",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report",
+    "test:login": "playwright test tests/login.spec.ts",
+    "test:forms": "playwright test tests/dynamic-controls.spec.ts",
+    "generate": "ts-node ai/generate-tests.ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0",
+    "ts-node": "^10.9.2",
+    "dotenv": "^16.4.5"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.0"
+  }
+}
